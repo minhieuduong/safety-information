@@ -7,17 +7,20 @@ int main () {
 	gets(phanturo);
 	printf("Nhap khoa k:\n");
 	scanf("%c", k);
-	for (i = 0; phanturo[i] != '/0', i++)
-	{
-	if (ch = 'a' && ch = 'z') {
+	for (i = 0; phanturo[i] != '\0'; i++){
+		ch = phanturo[i];
+	if(ch >= 'a' && ch <= 'z') {
 		ch = ch + k;
 		if (ch > 'z') {
 			ch = ch - 'z' + 'a' - 1;
 		}
-	}else if (ch = 'A' && ch = 'Z') {
+	}else if (ch >= 'A' && ch <= 'Z') {
 		ch = ch + k;
 		if (ch > 'Z') {
 			ch = ch - 'Z' + 'A' - 1;
 		}
-	printf("Phan tu ma la:", ch);
+		phanturo[i] = ch;
+		}
+	}
+	printf("Phan tu ma la:%s", ch);
 }
